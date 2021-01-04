@@ -53,7 +53,7 @@ class SearchCountry extends React.Component {
     }
 
     render() {
-	const countries = this.state.input ? this.state.countries.filter(country => country.name.toLowerCase() === this.state.input.toLowerCase()) : this.state.countries
+	const countries = this.state.input ? this.state.countries.filter(country => country.name.toLowerCase().indexOf(this.state.input.toLowerCase()) > -1) : this.state.countries
 	
 	return (
 	<>
